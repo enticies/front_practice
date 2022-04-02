@@ -1,0 +1,49 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    box-sizing: border-box;
+    font-family: "brandon-grotesque";
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+@font-face {
+    font-family: "brandon-grotesque";
+    src: url("fonts/brandon-grotesque-black-58a8a3e824392.otf") format("opentype"),
+         url("fonts/brandon-grotesque-bold-italic-58a8a48221563.otf") format("opentype"),
+         url("fonts/brandon-grotesque-light-58a8a4b38001d.otf") format("opentype"),
+         url("fonts/brandon-grotesque-light-italic-58a8a4ccb88be.otf") format("opentype"),
+         url("fonts/brandon-grotesque-medium-italic-58a8a3c40866a.otf") format("opentype"),
+         url("fonts/brandon-grotesque-regular-italic-58a8a456c4724.otf") format("opentype"),
+         url("fonts/brandon-grotesque-thin-italic-58a8a3a8861fe.otf") format("opentype");
+}
+
+header {
+    height: 150px;
+    width: 100%;
+    .top {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        height: auto;
+        background-color: black;
+        text-align: center;
+        color: white;
+        justify-content: center;
+        align-items: center; 
+        a {
+            padding-top: 8px;
+            padding-bottom: 8px;
+            padding-right: 20px;
+            padding-left: 20px;
+            width:fit-content;
+            display: block;
+        }
+    }
+}
