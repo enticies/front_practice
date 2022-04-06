@@ -6,7 +6,6 @@
 body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: "brandon-grotesque";
 }
 
 a {
@@ -20,20 +19,22 @@ a {
 }
 
 header {
-  height: 90px;
   width: 100%;
+  height: 125px;
 }
 
 header .top {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  font-family: "brandon-grotesque";
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   width: 100%;
-  height: auto;
+  height: 40px;
   background-color: black;
   text-align: center;
+  font-size: 16px;
   color: white;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -59,12 +60,17 @@ header .bottom {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  height: 100%;
+  height: 85px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 header .bottom div {
   width: 1300px;
-  margin: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -86,21 +92,33 @@ header .bottom div .icon__bag {
   margin-left: 20px;
 }
 
+.intro {
+  width: 100%;
+  height: 880px;
+  position: relative;
+}
+
+.intro .img {
+  width: 100%;
+  height: 100%;
+  background-image: url(img/bottles.png);
+  background-size: cover;
+  background-position: center;
+  -webkit-filter: brightness(70%);
+          filter: brightness(70%);
+}
+
+.intro .bglogo {
+  position: absolute;
+  width: 200px;
+  left: 50%;
+  translate: -50%;
+  top: 160px;
+}
+
 @media (max-width: 1300px) {
   header .bottom div {
-    width: 1000px;
-  }
-}
-
-@media (max-width: 1000px) {
-  header .bottom div {
-    width: 800px;
-  }
-}
-
-@media (max-width: 800px) {
-  header .bottom div {
-    width: 600px;
+    width: 100%;
   }
 }
 
