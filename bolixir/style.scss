@@ -100,8 +100,21 @@ header {
 
 
 @media (max-width: 600px) {
+    .intro .img {
+        margin-top: 100px;
+        display: block;
+    }
+    header .top {
+        height: auto;
+    }
+
+    header .bottom {
+        height: max-content; 
+        width: 100%;
+    }
+
     header .bottom div {
-        width: 300px;
+        width: 100%;
         flex-direction: column-reverse;
     }
     header .bottom div .right {
@@ -113,9 +126,11 @@ header {
         margin-top: 20px;
         .icon__bag {
             align-self: flex-start;
+            margin-right: 20px;
         }
         .icon__login {
             align-self: flex-end;
+            margin-left: 20px;
         }
     }
 }
