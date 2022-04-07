@@ -14,18 +14,46 @@ a {
 
 @font-face {
     font-family: "brandon-grotesque";
-    src: url("fonts/brandon-grotesque-black-58a8a3e824392.otf") format("opentype"),
-         url("fonts/brandon-grotesque-bold-italic-58a8a48221563.otf") format("opentype"),
-         url("fonts/brandon-grotesque-light-58a8a4b38001d.otf") format("opentype"),
-         url("fonts/brandon-grotesque-light-italic-58a8a4ccb88be.otf") format("opentype"),
-         url("fonts/brandon-grotesque-medium-italic-58a8a3c40866a.otf") format("opentype"),
-         url("fonts/brandon-grotesque-regular-italic-58a8a456c4724.otf") format("opentype"),
-         url("fonts/brandon-grotesque-thin-italic-58a8a3a8861fe.otf") format("opentype");
+    src: url("fonts/brandon/brandon-grotesque-black-58a8a3e824392.otf") format("opentype"),
+        url("fonts/brandon/brandon-grotesque-bold-italic-58a8a48221563.otf") format("opentype"),
+        url("fonts/brandon/brandon-grotesque-light-58a8a4b38001d.otf") format("opentype"),
+        url("fonts/brandon/brandon-grotesque-light-italic-58a8a4ccb88be.otf") format("opentype"),
+        url("fonts/brandon/brandon-grotesque-medium-italic-58a8a3c40866a.otf") format("opentype"),
+        url("fonts/brandon/brandon-grotesque-regular-italic-58a8a456c4724.otf") format("opentype"),
+        url("fonts/brandon/brandon-grotesque-thin-italic-58a8a3a8861fe.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "losta-masta";
+    src: url("fonts/losta/Fontspring-DEMO-lostamasta-black.otf") format("opentype"),
+        url("fonts/losta/Fontspring-DEMO-lostamasta-bold.otf") format("opentype"),
+        url("fonts/losta/Fontspring-DEMO-lostamasta-extrabold.otf") format("opentype"),
+        url("fonts/losta/Fontspring-DEMO-lostamasta-light.otf") format("opentype"),
+        url("fonts/losta/Fontspring-DEMO-lostamasta-ornaments.otf") format("opentype"),
+}
+
+@font-face {
+    font-family: "losta-masta";
+    src: url("fonts/losta/Fontspring-DEMO-lostamasta-regular.otf") format("opentype");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "aglat-slab";
+    src: url("fonts/aglab/Torrent\ Graphic\ SSi\ Regular.ttf") format("opentype");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "aglat-slab";
+    src: url("fonts/aglab/Torrent\ Graphic\ SSi\ Semi\ Bold.ttf");
+    font-weight: 500;
 }
 
 header {
     width: 100%;
     height: 125px;
+
     .top {
         display: flex;
         font-family: "brandon-grotesque";
@@ -37,13 +65,14 @@ header {
         font-size: 16px;
         color: white;
         justify-content: center;
-        align-items: center; 
+        align-items: center;
+
         a {
             padding-top: 8px;
             padding-bottom: 8px;
             padding-right: 20px;
             padding-left: 20px;
-            width:fit-content;
+            width: fit-content;
             display: block;
         }
     }
@@ -54,14 +83,17 @@ header {
         height: 85px;
         justify-content: center;
         align-items: center;
+
         div {
             width: 1300px;
             display: flex;
             align-items: center;
+
             .right {
                 display: flex;
                 justify-content: end;
             }
+
             .icon__bag {
                 margin-left: 20px;
             }
@@ -73,6 +105,7 @@ header {
     width: 100%;
     height: 880px;
     position: relative;
+
     .img {
         width: 100%;
         height: 100%;
@@ -81,35 +114,152 @@ header {
         background-position: center;
         filter: brightness(70%);
     }
-    .bglogo {
+
+    .innerimg {
+        height: max-content;
         position: absolute;
-        width: 200px;
+        width: 900px;
+        text-align: center;
         left: 50%;
         translate: (-50%);
         top: 160px;
+
+        img {
+            width: 200px;
+            display: block;
+            margin: auto;
+        }
+
+        .p1 {
+            font-family: "losta-masta";
+            font-weight: 400;
+            font-size: 45px;
+            line-height: 47px;
+            color: white;
+            letter-spacing: 2.5px;
+            margin-top: 30px;
+        }
+
+        .p2 {
+            margin-top: 37px;
+            font-size: 18px;
+            color: white;
+            font-family: "aglat-slab";
+        }
+
+        button {
+            width: 215px;
+            height: 56px;
+            font-family: "aglat-slab";
+            font-size: 16px;
+            line-height: 56px;
+            border-radius: 5px;
+            margin-top: 34px;
+            background-color: #5C1D80;
+            text-align: center;
+            border: none;
+            color: white;
+            cursor: pointer;
+        }
+
+        .boxes {
+            display: flex;
+            justify-content: space-between;
+            margin: auto;
+            width: 600px;
+            margin-top: 70px;
+            border: 2px solid red;
+
+            .box {
+                position: relative;
+
+                img {
+                    max-width: 90px;
+                    max-height: 90px;
+                }
+
+                p {
+                    top: 100px;
+                    position: absolute;
+                    color: white;
+                    font-family: "aglat-slab";
+                    font-weight: 500;
+
+                    span {
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
     }
 
+}
+
+@media (max-width: 1000px) {
+    .intro {
+        .innerimg {
+            .boxes {
+                width: 100% !important;
+            }
+        }
+    }
 }
 
 @media (max-width: 1300px) {
 
     header .bottom div {
-        width: 100%; 
+        width: 100%;
+    }
+
+    .intro {
+        overflow: hidden;
+        .innerimg {
+            width: 100% !important;
+            top: 50px;
+        }
+
+        .img {
+            background-size: cover;
+        }
     }
 }
 
 
 @media (max-width: 600px) {
-    .intro .img {
-        margin-top: 100px;
-        display: block;
+    .intro {
+        .img {
+            display: block;
+            border: 2px solid red;
+            z-index: -1;
+            padding-top: 100px;
+            scale: 2;
+        }
+
+        .innerimg {
+            top: 130px;
+            .boxes {
+                flex-wrap: wrap;
+
+                .box {
+                    width: 100%;
+                }
+            }
+        }
     }
+
+    header {
+        height: auto;
+        padding-bottom: 20px;
+        border: 2px solid black;
+    }
+
     header .top {
         height: auto;
     }
 
+
     header .bottom {
-        height: max-content; 
+        height: max-content;
         width: 100%;
     }
 
@@ -117,17 +267,20 @@ header {
         width: 100%;
         flex-direction: column-reverse;
     }
+
     header .bottom div .right {
         width: 100% !important;
         display: flex;
-        flex-direction:unset;
+        flex-direction: unset;
         justify-content: space-between;
         margin-bottom: 20px;
         margin-top: 20px;
+
         .icon__bag {
             align-self: flex-start;
             margin-right: 20px;
         }
+
         .icon__login {
             align-self: flex-end;
             margin-left: 20px;
