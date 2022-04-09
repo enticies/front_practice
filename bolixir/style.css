@@ -189,13 +189,11 @@ header .bottom div .icon__bag {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin: auto;
-  width: 600px;
-  margin-top: 70px;
-  border: 2px solid red;
-}
-
-.intro .innerimg .boxes .box {
-  position: relative;
+  width: 90%;
+  margin-top: 90px;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
 }
 
 .intro .innerimg .boxes .box img {
@@ -205,9 +203,10 @@ header .bottom div .icon__bag {
 
 .intro .innerimg .boxes .box p {
   top: 100px;
-  position: absolute;
   color: white;
+  margin-top: 15px;
   font-family: "aglat-slab";
+  font-size: 20px;
   font-weight: 500;
 }
 
@@ -215,19 +214,56 @@ header .bottom div .icon__bag {
   font-weight: 400;
 }
 
-@media (max-width: 1000px) {
-  .intro .innerimg .boxes {
-    width: 100% !important;
-  }
+.second {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 1000px;
+}
+
+.second .left {
+  width: 50%;
+  text-align: center;
+}
+
+.second .left img {
+  top: 0;
+  position: -webkit-sticky;
+  position: sticky;
+  scale: 1.05;
+}
+
+.second .right {
+  width: 50%;
+  font-weight: 400;
+}
+
+.second .right h1 {
+  font-size: 38px;
+  color: #682E8A;
+  margin-top: 50px;
+  margin-left: 70px;
+  font-family: "losta-masta";
+}
+
+.second .right p {
+  margin-left: 70px;
+  width: 50%;
+}
+
+.third {
+  height: 1000px;
+  width: 100%;
 }
 
 @media (max-width: 1300px) {
   header .bottom div {
     width: 100%;
   }
-  .intro {
-    overflow: hidden;
-  }
+}
+
+@media (max-width: 900px) {
   .intro .innerimg {
     width: 100% !important;
     top: 50px;
@@ -238,15 +274,17 @@ header .bottom div .icon__bag {
 }
 
 @media (max-width: 600px) {
+  .intro {
+    margin-top: 120px;
+    height: 800px;
+  }
   .intro .img {
     display: block;
-    border: 2px solid red;
-    z-index: -1;
     padding-top: 100px;
-    scale: 2;
+    scale: 1.2;
   }
   .intro .innerimg {
-    top: 130px;
+    top: -40px;
   }
   .intro .innerimg .boxes {
     -ms-flex-wrap: wrap;
@@ -254,11 +292,28 @@ header .bottom div .icon__bag {
   }
   .intro .innerimg .boxes .box {
     width: 100%;
+    margin-bottom: 40px;
+  }
+  .intro .innerimg .boxes .box div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .intro .innerimg .boxes .box div img {
+    width: 30%;
+  }
+  .intro .innerimg .boxes .box div p {
+    width: 70%;
+  }
+  .intro .innerimg .boxes .box div img, .intro .innerimg .boxes .box div p {
+    height: -webkit-min-content;
+    height: -moz-min-content;
+    height: min-content;
+    text-align: left;
   }
   header {
     height: auto;
     padding-bottom: 20px;
-    border: 2px solid black;
   }
   header .top {
     height: auto;

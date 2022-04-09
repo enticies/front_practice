@@ -166,13 +166,11 @@ header {
             display: flex;
             justify-content: space-between;
             margin: auto;
-            width: 600px;
-            margin-top: 70px;
-            border: 2px solid red;
+            width: 90%;
+            margin-top: 90px;
+            height: min-content;
 
             .box {
-                position: relative;
-
                 img {
                     max-width: 90px;
                     max-height: 90px;
@@ -180,9 +178,10 @@ header {
 
                 p {
                     top: 100px;
-                    position: absolute;
                     color: white;
+                    margin-top: 15px;
                     font-family: "aglat-slab";
+                    font-size: 20px;
                     font-weight: 500;
 
                     span {
@@ -195,24 +194,49 @@ header {
 
 }
 
-@media (max-width: 1000px) {
-    .intro {
-        .innerimg {
-            .boxes {
-                width: 100% !important;
-            }
+.second {
+    width: 100%;
+    display: flex;
+    height: 1000px;
+    .left {
+        width: 50%;
+        text-align: center;
+        img {
+            top: 0;
+            position: sticky;
+            scale: 1.05;
         }
+    }
+    .right {
+        h1 {
+            font-size: 38px;
+            color: #682E8A;
+            margin-top: 50px;
+            margin-left: 70px;
+            font-family: "losta-masta";
+        }
+        p {
+            margin-left: 70px;
+            width: 50%;
+        }
+        width: 50%;
+        font-weight: 400;
     }
 }
 
+.third {
+    height: 1000px;
+    width: 100%;
+}
+
 @media (max-width: 1300px) {
-
-    header .bottom div {
-        width: 100%;
+    header .bottom div{
+            width: 100%;
     }
+}
 
+@media (max-width: 900px) {
     .intro {
-        overflow: hidden;
         .innerimg {
             width: 100% !important;
             top: 50px;
@@ -227,21 +251,34 @@ header {
 
 @media (max-width: 600px) {
     .intro {
+        margin-top: 120px;
+        height: 800px;
         .img {
             display: block;
-            border: 2px solid red;
-            z-index: -1;
             padding-top: 100px;
-            scale: 2;
+            scale: 1.2;
         }
 
         .innerimg {
-            top: 130px;
+            top: -40px;
             .boxes {
                 flex-wrap: wrap;
-
                 .box {
                     width: 100%;
+                    margin-bottom: 40px;
+                    div {
+                        display: flex;
+                        img {
+                            width: 30%;
+                        }
+                        p {
+                            width: 70%;
+                        }
+                        img, p{
+                            height: min-content;
+                            text-align: left;
+                        }
+                    }
                 }
             }
         }
@@ -250,7 +287,6 @@ header {
     header {
         height: auto;
         padding-bottom: 20px;
-        border: 2px solid black;
     }
 
     header .top {
