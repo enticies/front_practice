@@ -220,18 +220,21 @@ header .bottom div .icon__bag {
   display: -ms-flexbox;
   display: flex;
   height: 1000px;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .second .left {
   width: 50%;
-  text-align: center;
 }
 
 .second .left img {
+  margin: auto;
+  display: block;
   top: 0;
   position: -webkit-sticky;
   position: sticky;
-  scale: 1.05;
 }
 
 .second .right {
@@ -239,17 +242,60 @@ header .bottom div .icon__bag {
   font-weight: 400;
 }
 
+.second .right div {
+  width: 60%;
+  margin-left: 70px;
+}
+
 .second .right h1 {
   font-size: 38px;
   color: #682E8A;
   margin-top: 50px;
-  margin-left: 70px;
   font-family: "losta-masta";
 }
 
-.second .right p {
-  margin-left: 70px;
-  width: 50%;
+.second .right h3 {
+  margin-top: 20px;
+  color: #8C8778;
+}
+
+.second .right div div {
+  margin-left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  margin-top: 20px;
+}
+
+.second .right div div .circle {
+  margin-right: 30px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 2px solid black;
+  font-size: 15px;
+  line-height: 80px;
+  text-align: center;
+}
+
+.second .right div h2 {
+  margin-top: 20px;
+  font-size: 30px;
+}
+
+.second .right div .p2 {
+  margin-top: 20px;
+}
+
+.second .right div input {
+  background-color: #5C1D80;
+  width: 150px;
+  height: 50px;
+  margin-top: 20px;
+  color: white;
 }
 
 .third {
@@ -260,6 +306,23 @@ header .bottom div .icon__bag {
 @media (max-width: 1300px) {
   header .bottom div {
     width: 100%;
+  }
+  .second {
+    height: -webkit-min-content;
+    height: -moz-min-content;
+    height: min-content;
+  }
+  .second .left, .second .right {
+    width: 100%;
+  }
+  .second .right div {
+    width: 100%;
+  }
+  .second .right div p, .second .right div h1 {
+    margin: 10px;
+  }
+  .second .left img {
+    position: unset;
   }
 }
 
@@ -310,6 +373,28 @@ header .bottom div .icon__bag {
     height: -moz-min-content;
     height: min-content;
     text-align: left;
+  }
+  .second {
+    margin-top: 200px;
+  }
+  .second .left {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .second .left img {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    display: block;
+  }
+  .second .right div {
+    margin-left: 0;
+    width: 100%;
+    border: 2px solid red;
   }
   header {
     height: auto;
