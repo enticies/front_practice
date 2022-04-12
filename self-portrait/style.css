@@ -100,6 +100,20 @@ header .right .bag a {
   width: min-content;
 }
 
+header .logo {
+  position: absolute;
+  top: 100px;
+  left: 50px;
+  width: 40px;
+  font-weight: bold;
+}
+
+header .logo p {
+  font-size: 25px;
+  line-height: 25px;
+  text-transform: lowercase;
+}
+
 .tab {
   position: relative;
 }
@@ -125,6 +139,20 @@ header .right .bag a {
   }
   header .right .medium {
     display: block;
+  }
+}
+
+@media (max-width: 1100px) {
+  header {
+    background-color: transparent;
+    border: 0;
+  }
+  header .logo {
+    top: 20px;
+    left: 10px;
+  }
+  header .left .tab {
+    display: none;
   }
 }
 /*# sourceMappingURL=style.css.map */
