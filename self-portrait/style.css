@@ -6,7 +6,7 @@
 body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: "Helvetica Neue",Helvetica,Arial;
+  font-family: "Helvetica Neue", Helvetica, Arial;
 }
 
 a {
@@ -15,7 +15,7 @@ a {
 }
 
 header {
-  position: fixed;
+  position: relative;
   width: 100%;
   height: 60px;
   line-height: 60px;
@@ -25,10 +25,12 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 header .left {
-  width: auto;
+  width: 60%;
   height: 100%;
   white-space: nowrap;
   display: -webkit-box;
@@ -42,7 +44,7 @@ header .left a {
 }
 
 header .right {
-  width: 100%;
+  width: 40%;
   text-align: right;
 }
 
@@ -102,16 +104,20 @@ header .right .bag a {
 
 header .logo {
   position: absolute;
-  top: 100px;
-  left: 50px;
-  width: 40px;
+  width: 40%;
+  top: 50px;
+  height: 60px;
   font-weight: bold;
+  z-index: 100000;
 }
 
 header .logo p {
-  font-size: 25px;
-  line-height: 25px;
+  font-size: 36px;
+  line-height: 36px;
   text-transform: lowercase;
+  width: 100px;
+  margin-left: 50px;
+  margin-top: 50px;
 }
 
 .tab {
@@ -133,6 +139,51 @@ header .logo p {
   width: 100%;
 }
 
+.first {
+  width: 100%;
+  z-index: -1;
+  height: auto;
+  border: 2px solid purple;
+  position: relative;
+}
+
+.first img {
+  z-index: -2;
+  width: 100%;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+}
+
+.first a {
+  cursor: pointer;
+  z-index: 21312312;
+  color: red;
+}
+
+.first .text {
+  position: absolute;
+  width: 40%;
+  height: 50%;
+  max-width: 500px;
+  border: 2px solid red;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: 0px;
+  text-align: center;
+  color: white;
+}
+
+.first .text h1 {
+  font-size: 80px;
+  font-weight: 400;
+}
+
+.mobile-header {
+  display: none;
+}
+
 @media (max-width: 1300px) {
   header .right .large {
     display: none;
@@ -140,19 +191,56 @@ header .logo p {
   header .right .medium {
     display: block;
   }
+  .first .text h1 {
+    font-size: 60px;
+  }
 }
 
 @media (max-width: 1100px) {
   header {
-    background-color: transparent;
-    border: 0;
-  }
-  header .logo {
-    top: 20px;
-    left: 10px;
-  }
-  header .left .tab {
     display: none;
+  }
+  .mobile-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    background-color: transparent;
+  }
+  .mobile-header .left {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 50%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 33px;
+  }
+  .mobile-header .left p {
+    font-weight: bold;
+    font-size: 35px;
+    width: 50px;
+    margin-left: 20px;
+  }
+  .mobile-header .right {
+    width: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .mobile-header .right i {
+    margin-right: 25px;
+    display: block;
+    font-size: 30px;
   }
 }
 /*# sourceMappingURL=style.css.map */
